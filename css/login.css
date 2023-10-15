@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    font-family: 'poppins',sans-serif;
+    max-height: 100vh;
+    background-color: #1F252E;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* =================== nav bar starting ========================================= */
+.nav_bar {
+   padding: 1.7rem 1rem;
+   background-color: #fff;
+   display: flex;
+   justify-content: space-between;
+   max-width: 80%;
+   margin: auto;
+   align-items: center;
+   background-color: transparent;
+
+}
+
+header {
+    padding: 1.7rem 1rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    align-items: center;
+    background-color: transparent;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: .97rem;
+    font-weight: 600;
+    letter-spacing: .7px;
+    padding: 1rem;
+    padding: 0.4rem 1 rem;
+
+}
+
+nav a.active,
+nav a:hover {
+    color: #00E8F8;
+    border-radius: 1rem;
+    transition: all.3s ease-in-out;
+
+}
+
+#click {
+    display: none;
+}
+.menu i {
+    color: #00E8F8;
+}
+
+.menu {
+    display: none;
+}
+
+
+/* =========================  nav bar end ...............=============================== */
+
+/* ========================== about mr section  =========================== */
+
+.about_me {
+    margin: 2rem 8.5rem;
+
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem auto;
+}
+.main h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+
+}
+
+.main p {
+    margin-top: 1 rem;
+    font-size: .98rem;
+    color: #fff;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    margin-top: 1..7rem;
+}
+
+.social a {
+    color: #00E8F8;
+    font-size: 1rem;
+    border: 1.6px solid#00E8F8;
+    border-radius: 50%;
+    padding: .35rem;
+    text-align: center;
+    width: 40px;
+}
+
+.social a:hover {
+    color: #1F252E;
+    background-color: #00E8F8;
+    box-shadow: 0 0 20px #00E8F8;
+    transition: all .3s ease-in-out;
+}
+
+.main h1 span:nth-child(1) {
+    font-size: 1.5rem;
+
+}
+
+.main h1 span:nth-child(2) {
+    color: #00E8F8;
+}
+
+.image {
+    background-image:url("") ;
+    background-repeat: no-repeat;
+    background-position: 0 -75px;
+    -webkit-box-shadow:0 10px 10px -10px #000000;
+    -moz-box-shadow:0 10px 10px -10px #000000;
+    box-shadow: 0px 16px 4px -10px #00E8F8;
+    background-size: cover;
+}
+
+@media only screen and (max-width:480px) {
+    .menu {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #244D61;
+    }
+    header {
+        padding: 0.7rem 1rem;
+        align-items: center;
+        max-width: 100%;
+    }
+    nav {
+        position: absolute;
+        display: grid;
+        top: 75px;
+        text-align: center;
+        background-color: #1F252E;
+        left: -100%;
+        z-index: 1;
+        width: 100%;
+
+    }
+    #click:checked-nav {
+        left: 0%;
+        transition: all 0.3s ease;
+    }
+    section {
+        margin: 1rem 1.5rem;
+    }
+}
+
+/* ----------------- log in page ---------------- */
+
+
+.box {
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+
+}
+.box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+
+}
+.borderline{
+    position: absolute;
+    top: 0;
+    inset: 0;
+
+}
+.borderline::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+
+}
+.borderline::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+
+}
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.box form {
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.box form h2 {
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+.box form .inputBox {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+
+}
+.box form .inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #23242a;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+
+}
+.box form .inputBox span{
+    padding: 20px 10px 10px;
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+
+}
+.box form .inputBox input:valid ~ span,
+.box form .inputBox input:focus ~ span
+{
+  color: #fff;
+  font-size: 0.75em;
+  transform: translateY(-34px);
+
+
+    
+}
+
+.box form  .inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.box form .inputBox input:valid ~ i,
+.box form .inputBox input:focus ~ i
+{
+   height: 44px;
+}
+.box form .links {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+.box form .links a {
+    margin: 10px 0;
+    color: #8f8f8f;
+    font-size: 0.75em;
+    text-decoration: none;
+
+
+  
+}
+.box form .links a:hover,
+.box form .links a:nth-child(2){
+    color: #00E8F8;
+
+}
+.box form input[type="submit"] {
+
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+    width: 100px;
+    border-radius: 4px;
+    margin-top: 10px;
+  
+
+}
+.box form input[type="submit"]:hover ,
+.box form input[type="submit"]:active{
+    opacity: 0.8;
+    color: #1F252E;
+    background-color: #00E8F8;
+    box-shadow: 0 0 20px #00E8F8;
+    transition: all .3s ease-in-out;
+
+}
